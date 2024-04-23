@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Поиск вакансий</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body { padding: 20px; }
+    #results { margin-top: 20px; }
+    .job-card { margin-bottom: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-4">Поиск вакансий</h1>
+    <div class="input-group mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Введите название вакансии" aria-label="Название вакансии">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="searchJobs()">Искать</button>
+        </div>
+    </div>
+    <div id="results"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

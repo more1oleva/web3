@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Калькулятор вкладов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <script src="./index.js"></script>
+  <style>
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select, input[type="number"], button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px auto;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Калькулятор вкладов</h1>
+    <form id="calculator-form">
+      <div class="form-group">
+        <label for="deposit-type">Вид вклада:</label>
+        <select id="deposit-type" name="deposit-type">
+          <option value="popolnyaemy">Пополняемый</option>
+          <option value="srochnyy">Срочный</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="investment-period">Срок вклада:</label>
+        <select id="investment-period" name="investment-period">
+          <option value="6 месяцев">6 месяцев</option>
+          <option value="1 год">1 год</option>
+          <option value="1,5 года">1,5 года</option>
+          <option value="2 года">2 года</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="initial-amount">Начальная сумма (руб.):</label>
+        <input type="number" id="initial-amount" name="initial-amount" required>
+      </div>
+      <button type="submit">Рассчитать</button>
+    </form>
+    <div id="result"></div>
+  </div>
+</body>
+</html>
